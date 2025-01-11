@@ -22,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run Huff Tests
-        uses: cakevm/huff-neo-tests-action@v3
+        uses: cakevm/huff-neo-tests-action@v1
         with:
           # Below arguments are optional:
           with-location: "tests" # Defaults to "src"
