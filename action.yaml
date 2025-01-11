@@ -1,5 +1,8 @@
----
+name: "Run tests with Huff Neo"
 description: "Run Native Huff-language Tests with Huff Neo"
+branding:
+  icon: play-circle
+  color: black
 inputs:
   with-location:
     default: src
@@ -14,7 +17,7 @@ inputs:
     description: "The format of your huff test output"
     required: false
 
-name: "Run tests with Huff Neo"
+
 runs:
   steps:
     - uses: actions/checkout@v3
