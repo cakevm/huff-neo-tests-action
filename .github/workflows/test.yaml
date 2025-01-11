@@ -4,22 +4,23 @@ on: [push]
 
 jobs:
   tests:
-    name: Tests in Huff
+    name: Tests with Huff Neo
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
-          submodules: recursive
+          fetch-depth: 0
+
       - name: Install Foundry
         uses: foundry-rs/foundry-toolchain@v1
         with:
           version: nightly
       - name: Install Huff
-        uses: huff-language/huff-toolchain@v2
+        uses: cakevm/huff-neo-toolchain@v1
         with:
-          version: nightly
+          version: latest
       - name: Huff Tests
-        uses: huff-language/huff-tests-action@v3
+        uses: ./ # uses the action in the current repository
         with:
           with-location: "tests" # defaults to "src"
           with-extension: "*.t.huff" # default

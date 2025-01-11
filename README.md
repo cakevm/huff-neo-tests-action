@@ -1,14 +1,13 @@
-## Huff Tests Github Action
+## Huff Neo Tests Github Action
 
 Github Action that:
 
 1. Checks out your local repository
-2. Installs huffc
+2. Installs [Huff Neo Compiler](https://github.com/cakevm/huff-neo)
 3. Runs Huff tests on any files that match the default or specified parameters:
-
-- 1. Named `*.t.huff` or the specified extension
-- 2. Located in `src` or the specified directory
-- 3. With the specified output or `list`
+   - Named `*.t.huff` or the specified extension
+   - Located in `src` or the specified directory
+   - With the specified output or `list`
 
 ## Example Workflow
 
@@ -23,7 +22,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Run Huff Tests
-        uses: huff-language/huff-tests-action@v3
+        uses: cakevm/huff-neo-tests-action@v3
         with:
           # Below arguments are optional:
           with-location: "tests" # Defaults to "src"
@@ -44,7 +43,7 @@ jobs:
 All contributions are welcome.
 
 ## Acknowledgements
+Many thanks to the original [huff-tests-action](https://github.com/huff-language/huff-tests-action) for the initial version.
 
-- [Huff Toolchain](https://github.com/huff-language/huff-toolchain)
-- [Huff-rs](https://github.com/huff-language/huff-rs)
-- [This Tutorial](https://docs.github.com/en/actions/creating-actions/creating-a-composite-action)
+## License
+This project is licensed under the Apache-2.0 License - see the [LICENSE](./LICENSE) file for details.

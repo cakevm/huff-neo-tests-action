@@ -1,5 +1,5 @@
 ---
-description: "Run Native Huff-language Tests"
+description: "Run Native Huff-language Tests with Huff Neo"
 inputs:
   with-location:
     default: src
@@ -21,10 +21,10 @@ runs:
       with:
         submodules: recursive
 
-    - name: "Installing Huff"
-      uses: huff-language/huff-toolchain@v2
+    - name: "Installing Huff Neo"
+      uses: cakevm/huff-neo-toolchain@v1
       with:
-        version: nightly
+        version: latest
 
     - if: inputs.with-forge-tests == true
       name: "Installing foundry"

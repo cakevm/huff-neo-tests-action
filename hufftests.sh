@@ -9,7 +9,7 @@ files=`find $location -type f -name "$extension"`
 set -- junk $files
 shift
 for word; do
-   huffc $word test --format $format
+   hnc $word test --format $format
 done
 
 echo "Tests ran on"
