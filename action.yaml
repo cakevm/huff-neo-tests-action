@@ -39,6 +39,6 @@ runs:
       shell: bash
 
     - name: "Running Huff Tests"
-      run: "bash hufftests.sh ${{ inputs.with-extension }} ${{ inputs.with-location }} ${{ inputs.with-format }}"
+      run: "bash hufftests.sh ${{ inputs.with-location }} ${{ inputs.with-extension }} ${{ inputs.with-format }}"
       shell: bash
   using: composite
